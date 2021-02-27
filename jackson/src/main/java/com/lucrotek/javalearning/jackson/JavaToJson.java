@@ -125,6 +125,16 @@ org.bson.Document doc = Document.parse(jsonString);
             e.printStackTrace();
         }
 
+        List<String> tradeTemplateList = new ArrayList<>();
+        tradeTemplateList.add("item 1");
+        tradeTemplateList.add("item 2");
+        tradeTemplateList.add("item 3");
+
+        try {
+            log.info(objectMapper.writeValueAsString(tradeTemplateList));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
 
     }
 
